@@ -6,19 +6,43 @@
     <title>테이블 관련 요소 | Likelion Bootcamp</title>
 
     <style>
-      table {
-        border-collapse: collapse;
-        border: 1px solid #ddd;
-        border-bottom: none;
-      }
+      table,
       table td,
       table th {
-        border-bottom: 1px solid #ddd;
-        padding: 6px 8px;
+        border: 1px solid #ddd;
+        padding: 10px 15px;
+        font-size: 15px;
+        border-spacing: 0;
+        border-collapse: collapse;
       }
-      table td:not(:last-of-type),
-      table th:not(:last-of-type) {
-        border-right: 1px solid #ddd;
+      table caption span {
+        display: block;
+      }
+      table caption span:not(.sr-only) {
+        font-size: 18px;
+        font-weight: 800;
+        margin-bottom: 12px;
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      .sr-only:focus,
+      .sr-only:active {
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        clip: auto;
+        white-space: normal;
       }
     </style>
   </head>
@@ -39,7 +63,7 @@
       <li>- 복잡한 표의 경우 `id`, `headers` 속성을 사용할 수 있다.</li>
       <li>- 테이블의 내용 셀은 &lt;td&gt; 요소로 마크업한다.</li>
     </ul>
-
+    <br />
     <table>
       <tr>
         <th scope="col">이름</th>
@@ -106,6 +130,43 @@
           <td>100</td>
         </tr>
       </tbody>
+      <tfoot>
+        <tr>
+          <th scope="row">합계</th>
+          <td colspan="3">10000</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <hr />
+
+    <table>
+      <caption>
+        <span>입문자를 위한 Git과 HTML&CSS 과정</span>
+        <span class="sr-only">학습시간, 난이도, 교육비 지원, 평가항목, 수료기준, 정원, 교재 정보 등을 나타낸 표</span>
+      </caption>
+      <tr>
+        <th scope="row" id="learn-time">학습시간</th>
+        <td headers="learn-time">09:00 ~ 17:00 (28시간)</td>
+        <th scope="row" id="difficulty-level">난이도</th>
+        <td headers="difficulty-level">초급</td>
+      </tr>
+      <tr>
+        <th scope="row" id="education-expenses">교육비 지원</th>
+        <td headers="education-expenses">고용보험 비환급</td>
+        <th scope="row" id="evaluation-items">평가항목</th>
+        <td headers="evaluation-items">출석률 100%</td>
+      </tr>
+      <tr>
+        <th>수료기준</th>
+        <td>총점 80점 이상시 수료</td>
+        <th>정원</th>
+        <td>24명</td>
+      </tr>
+      <tr>
+        <th>교재정보</th>
+        <td colspan="3">입문자를 위한 Git과 HTML&CSS HTML & CSS 웹사이트 개발과 디자인 기초 (35,000원)</td>
+      </tr>
     </table>
   </body>
 </html>
