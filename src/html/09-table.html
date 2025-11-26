@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>테이블 관련 요소 | Likelion Bootcamp</title>
+
+    <style>
+      table {
+        border-collapse: collapse;
+        border: 1px solid #ddd;
+        border-bottom: none;
+      }
+      table td,
+      table th {
+        border-bottom: 1px solid #ddd;
+        padding: 6px 8px;
+      }
+      table td:not(:last-of-type),
+      table th:not(:last-of-type) {
+        border-right: 1px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/index.html">Index로 이동</a>
+    <hr />
+    <h1>테이블 관련 요소</h1>
+
+    <ul>
+      <li>- 테이블 관련 요소</li>
+      <li>- `&lt;table&gt;` 요소는 테이블을 정의하는 기본 요소이다.</li>
+      <li>- `&lt;caption&gt;` 요소를 사용하여 테이블의 제목을 정의할 수 있다.</li>
+      <li>- `&lt;colgroup&gt;` 요소로 열 그룹을 정의할 수 있으며 여러 개의 `&lt;col&gt;` 요소를 포함할 수 있다.</li>
+      <li>- 테이블의 헤더 역할의 행을 `&lt;thead&gt;` 요소로, 푸터 역할의 행을 `&lt;tfoot&gt;` 요소로 마크업한다.</li>
+      <li>- `&lt;thead&gt;` 요소와 `&lt;tfoot&gt;` 요소는 `&lt;table&gt;` 요소 안에서 1번만 사용할 수 있다.</li>
+      <li>- `&lt;tbody&gt;` 요소는 테이블의 본문 행을 의미하면 여러 번 사용할 수 있다.</li>
+      <li>- 테이블의 제목 셀의 역할은 `&lt;th&gt;` 요소로 마크업하며 해당 요소에 `scope` 속성을 사용하여 열 또는 행제목임을 스크린리더 환경에서 이해할 수 있도록 할 수 있다.</li>
+      <li>- 복잡한 표의 경우 `id`, `headers` 속성을 사용할 수 있다.</li>
+      <li>- 테이블의 내용 셀은 &lt;td&gt; 요소로 마크업한다.</li>
+    </ul>
+
+    <table>
+      <tr>
+        <th scope="col">이름</th>
+        <th scope="col">HTML</th>
+        <th scope="col">CSS</th>
+        <th scope="col">Javascript</th>
+      </tr>
+      <tr>
+        <td>박연하</td>
+        <td>100</td>
+        <td>90</td>
+        <td>95</td>
+      </tr>
+      <tr>
+        <td>박희연</td>
+        <td>50</td>
+        <td>90</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>이찬미</td>
+        <td>20</td>
+        <td>100</td>
+        <td>100</td>
+      </tr>
+    </table>
+
+    <hr />
+
+    <table>
+      <caption>
+        프론트엔드 시험 결과
+      </caption>
+      <colgroup>
+        <col class="name" />
+        <col span="2" class="html-css" />
+        <col class="js" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th scope="col">이름</th>
+          <th scope="col">HTML</th>
+          <th scope="col">CSS</th>
+          <th scope="col">Javascript</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">조재권</th>
+          <td>100</td>
+          <td>90</td>
+          <td>95</td>
+        </tr>
+        <tr>
+          <th scope="row">사민재</th>
+          <td>50</td>
+          <td>90</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <th scope="row">김효경</th>
+          <td>20</td>
+          <td>100</td>
+          <td>100</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
