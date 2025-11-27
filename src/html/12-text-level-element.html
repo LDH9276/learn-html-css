@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>텍스트 레벨 요소 | Likelion Bootcamp</title>
+    <style>
+      .text {
+        font-size: 28px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/index.html">Index로 이동</a>
+    <hr />
+    <h1>텍스트 레벨 요소</h1>
+    <ul>
+      <li>
+        위첨자, 아래첨자
+        <ul>
+          <li>&lt;sup&gt;, &lt;sub&gt; 요소를 사용하여 위첨자와 아래첨자롤 표현할 수 있다.</li>
+        </ul>
+      </li>
+      <li>
+        축약어, 날짜, 취소정보
+        <ul>
+          <li>&lt;abbr&gt; 요소는 약어(abbreviation)나 약칭(acronym)을 나타내는 데 사용한다. 이때 title 속성을 사용하여 약어의 내용을 이해할 수 있는 추가정보를 제공할 수 있다.</li>
+          <li>&lt;time&gt; 요소는 날짜와 시간 정보를 표현하는 데 사용된다. 이 요소는 날짜 및 시간의 의미를 명확히 하기 위해 `datetime` 속성을 사용할 수 있다.</li>
+          <li>&lt;mark&gt; 요소는 하이라이트 된 텍스트를 나타내며, 주로 검색 결과나 중요한 정보를 하이라이트 하는 용도로 사용한다.</li>
+          <li>&lt;s&gt; 요소는 텍스트가 더 이상 유효하지 않거나 잘못된 정보를 나타낼 때 사용된다. 일반적으로 취소선으로 표시되어, 해당 텍스트가 더 이상 적용되지 않음을 나타낸다.</li>
+          <li>&lt;small&gt; 요소는 텍스트의 크기를 줄여서 표시하며, 일반적으로 부가적인 정보나 주석을 나타내는 데 사용된다. 이때 부가 정보는 저작권 정보나 주석, 설명 등을 예로 들 수 있다.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div>
+      <h2>윗첨자, 아래첨자</h2>
+      <p class="text">H<sub>2</sub>O</p>
+      <p class="text">x<sup>2</sup></p>
+
+      <h2>축약어</h2>
+      <p class="text">
+        <abbr title="Hyper Text Markup Language"> HTML </abbr>
+      </p>
+      <p class="text">
+        <abbr title="점심 메뉴 추천"> 점메추 </abbr>
+      </p>
+
+      <h2>날짜와 시간</h2>
+      <p class="txt">
+        <time class="text" datetime="2025-11-27T10:16:30">2025년 11월 27일 목요일 오전 10시 16분 30초</time>
+      </p>
+
+      <h2>삭제된 정보</h2>
+      <div>
+        <p aria-hidden="true">정상 가격 <s>19,900원</s></p>
+        <p>할인 가격 9,900원</p>
+      </div>
+
+      <h2>저작권 및 법률 관련 정보</h2>
+      <div class="text">
+        <small>copyright &copy;</small>
+      </div>
+
+      <h2>하이라이트 영역</h2>
+      <p class="text">멋쟁이 사자처럼 <mark>프론트엔드 부트캠프 16기</mark></p>
+    </div>
+  </body>
+</html>
