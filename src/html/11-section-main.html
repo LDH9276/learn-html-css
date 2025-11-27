@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>섹션과 메인 요소 | Likelion Bootcamp</title>
+  </head>
+  <body>
+    <a href="/index.html">Index로 이동</a>
+    <hr />
+    <h1>섹션과 메인 요소</h1>
+    <ul>
+      <li>
+        header, footer 요소
+        <ul>
+          <li>문서나 섹션의 머리말, 바닥글을 정의할 때 사용한다.</li>
+          <li>`&lt;header&gt;` 요소에는 사이트의 로고나 제목, 내비게이션 등의 정보가 포함될 수 있다.</li>
+          <li>`&lt;footer&gt;` 요소는 연락처나 저작권 정보와 관련 링크 등을 포함한다.</li>
+        </ul>
+      </li>
+      <li>
+        nav 요소
+        <ul>
+          <li>`&lt;nav&gt;` 요소는 여러 번 사용할 수 있지만 해당 영역이 주요 내비게이션을 포함하는지 명확하게 확인하고 일반적인 링크와는 구분해서 사용해야 한다.</li>
+        </ul>
+      </li>
+      <li>
+        main 요소
+        <ul>
+          <li>문서의 주요 콘텐츠를 포함하는 컨테이너 요소로 문서 내에서 한 번만 사용할 수 있다.</li>
+          <li>aside 요소</li>
+          <li>주요 콘텐츠와는 독립적인 내용이지만 관련성이 있는 정보를 제공할 때 사용한다.</li>
+          <li>`&lt;aside&gt;`를 사용하여 블로그 글과 관련된 기사, 인용구 등을 표현할 수 있다.</li>
+        </ul>
+      </li>
+      <li>
+        section, article 요소
+        <ul>
+          <li>`&lt;section&gt;` 요소는 문서 내에서 주제별로 나누어진 콘텐츠 블록을 정의하는 데 사용되며 각 섹션은 제목을 가질 수 있다.</li>
+          <li>`&lt;article&gt;` 요소는 독립적으로 배포하거나 재사용할 수 있는 콘텐츠를 정의하는데 사용되며 일반적으로 블로그 포스트, 뉴스 기사, 사용자 생성 콘텐츠 등이 포함된다.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- 시맨틱 마크업을 고려한 코드 -->
+    <header>머리말</header>
+    <nav>메뉴</nav>
+    <main>
+      <section>콘텐츠 섹션</section>
+      <article>콘텐츠 섹션</article>
+    </main>
+    <aside>부가 정보</aside>
+    <footer>바닥글</footer>
+
+    <hr />
+
+    <!-- 시맨틱 마크업을 고려하지 않은 코드 -->
+    <div role="banner">헤더</div>
+    <div role="navigation">메뉴</div>
+    <div role="main">
+      <div role="article">콘텐츠 섹션</div>
+      <div role="article">콘텐츠 섹션</div>
+    </div>
+    <div role="complementary">부가 정보</div>
+    <div role="contentinfo">바닥글</div>
+  </body>
+</html>
