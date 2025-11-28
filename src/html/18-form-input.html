@@ -10,7 +10,7 @@
     <hr />
     <h1>폼과 인풋요소</h1>
 
-    <form action="#none">
+    <form action="#none" method="post">
       <fieldset>
         <legend>필수 입력</legend>
         <div>
@@ -30,6 +30,59 @@
           <input type="email" name="userEmail" id="userEmail" required />
         </div>
       </fieldset>
+    </form>
+    <hr />
+    <form action="https://formspree.io/f/xeqwwbwk" method="post">
+      <!-- 텍스트 입력 서식 -->
+      <div>
+        <label for="userID">ID</label>
+        <input type="text" id="userID" placeholder="아이디 or 이메일" required />
+      </div>
+      <!-- 비밀번호 입력 서식 -->
+      <div>
+        <label for="userPW">비밀번호</label>
+        <input type="text" id="userPW" placeholder="비밀번호는 최소 8자 이상 입력하세요." required />
+      </div>
+      <!-- 이메일 입력 서식 -->
+      <div>
+        <label for="userEM">비밀번호</label>
+        <input type="email" id="userEM" placeholder="예시: guest@Likelion.com" required />
+      </div>
+      <!-- 전화번호 입력 서식 -->
+      <div>
+        <label for="userPH">전화번호</label>
+        <input type="tel" id="userPH" placeholder="예시: 010-0000-0000" required />
+      </div>
+      <!-- URL 입력 서식 -->
+      <div>
+        <label for="userSNS">SNS</label>
+        <input type="url" id="userSNS" placeholder="예시: https://www.facebook.com/" />
+      </div>
+
+      <!-- 검색어 입력 서식 -->
+      <div>
+        <label for="search">검색어 입력</label>
+        <input type="search" name="search" id="search" />
+      </div>
+
+      <!-- 라디오 입력 서식 -->
+      <div>
+        <input type="radio" id="mail" name="userGender" value="man" checked />
+        <label for="mail">남자</label>
+        <input type="radio" id="female" name="userGender" value="woman" />
+        <label for="female">여자</label>
+      </div>
+      <!-- 체크박스 입력 서식 -->
+      <div>
+        <input type="checkbox" id="html" name="frontend" value="html" />
+        <label for="html">html</label>
+        <input type="checkbox" id="css" name="frontend" value="css" />
+        <label for="css">css</label>
+        <input type="checkbox" id="js" name="frontend" value="js" />
+        <label for="js">javascript</label>
+      </div>
+
+      <input type="submit" value="전송" />
     </form>
   </body>
 </html>
