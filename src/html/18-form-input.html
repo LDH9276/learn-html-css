@@ -41,17 +41,17 @@
       <!-- 비밀번호 입력 서식 -->
       <div>
         <label for="userPW">비밀번호</label>
-        <input type="text" id="userPW" placeholder="비밀번호는 최소 8자 이상 입력하세요." required />
+        <input type="password" id="userPW" placeholder="비밀번호는 최소 8자 이상 입력하세요." required pattern="^(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$" />
       </div>
       <!-- 이메일 입력 서식 -->
       <div>
-        <label for="userEM">비밀번호</label>
+        <label for="userEM">이메일</label>
         <input type="email" id="userEM" placeholder="예시: guest@Likelion.com" required />
       </div>
       <!-- 전화번호 입력 서식 -->
       <div>
         <label for="userPH">전화번호</label>
-        <input type="tel" id="userPH" placeholder="예시: 010-0000-0000" required />
+        <input type="tel" id="userPH" placeholder="예시: 010-0000-0000" required pattern="[0-9]{10}" />
       </div>
       <!-- URL 입력 서식 -->
       <div>
@@ -61,8 +61,8 @@
 
       <!-- 검색어 입력 서식 -->
       <div>
-        <label for="search">검색어 입력</label>
-        <input type="search" name="search" id="search" />
+        <label for="search1">검색어 입력</label>
+        <input type="search" name="search" id="search1" />
       </div>
       <!-- 검색어 입력 서식 -->
       <div>
@@ -88,6 +88,7 @@
       </div>
 
       <input type="submit" value="전송" />
+      <input type="reset" value="초기화" />
     </form>
   </body>
 </html>
