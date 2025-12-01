@@ -1,2 +1,16 @@
 /* 메인 페이지 스타일 */
-.sr-only {}
+* {
+  font-family: 'SUIT Variable';
+}
+
+div:first-of-type {
+  margin-bottom: 30px;
+}
+
+div h2 {
+  font-size: 28px;
+}
+div li {
+  padding: 5px 0;
+  font-size: 18px;
+}
