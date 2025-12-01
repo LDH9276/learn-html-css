@@ -1,0 +1,81 @@
+/* CSS 선택자 */
+* {
+  font-family: 'SUIT Variable';
+}
+
+body{
+  margin: 0;
+  background-color: #fff;
+}
+
+p{
+  width: 650px;
+  margin-top: 12px;
+  line-height: 1.525;
+}
+
+#bootcamp{
+  background: salmon;
+}
+
+[title^="멋사"]{
+  font-size: 14px;
+  line-height: 2;
+}
+
+
+.frontend > .lion{
+  border:5px solid blue;
+}
+
+.frontend > .like > .lion{
+  border:5px solid blue;
+  font-size: 36px;
+}
+
+.lion{
+  background-color: limegreen;
+}
+
+h2 + p {
+  background: lime;
+}
+
+h1::before {
+  content: '웹표준 - ';
+}
+
+p::first-letter {
+  font-size: 60px;
+}
+
+::selection {
+  background-color: black;
+  color: white;
+}
+
+:root{
+  --context : 20px;
+}
+
+.samples2{
+  font-size: var(--context);
+}
+
+a{
+  display: block;
+  padding: 25px;
+  margin: 25px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+a:hover{
+  color: orange;
+}
+
+a:focus{
+  background: darkblue;
+  color: #fff;
+}

@@ -1,0 +1,33 @@
+/* 상속, 겹침, 우선순위 */
+
+body{
+  color: green;
+}
+
+p{
+  color: maroon;
+}
+
+.wrapper{
+  color: red;
+}
+
+.lion{
+  color: blue;
+}
+
+/* CSS에서 ID를 재정의하는 케이스는 적다. */
+#bootcamp .lion{
+  color: orange;
+}
+
+.frontend .lion{
+  color: orangered;
+}
+
+.frontend .note{
+  color: #000;
+}
+.frontend .note.lion{
+  font-size: 24px;
+}
