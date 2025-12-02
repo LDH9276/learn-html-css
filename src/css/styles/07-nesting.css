@@ -1,0 +1,15 @@
+/* CSS 중첩 */
+.frontend {
+  padding: 20px;
+  border: 1px solid green;
+  font-size: 10px;
+
+  &:hover {
+    background-color: #fcf;
+  }
+
+  p {
+    font-size: 2em;
+    line-height: 1.65;
+  }
+}
