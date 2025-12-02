@@ -1,0 +1,59 @@
+/* 타이포그래피 및 단위 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap');
+
+/* 글꼴 */
+
+h1{
+  font-family: 'SUIT Variable', sans-serif;
+  font-weight: 100;
+  font-size: 36px;
+}
+
+.like{
+  margin: 35px 0 15px;
+  font-family: 'Noto Serif KR', 'Times New Roman', Times, serif;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.front-end{
+  font-size: 18px;
+}
+
+.lion{
+  background-color: #ffc;
+  font-family: 'Pretendard';
+  /* 부모로 부터 상속 받을 기준으로 em이 적용 */
+  /* font-size: 1.5em;  */
+
+  /* HTML 최상위로부터 상속 받는 기준은 rem */
+  /* font-size: 1.5rem;  */
+
+  /* 뷰포트 기준으로 정해지는 값 */
+  /* font-size: 1.55vw; */
+
+  /* clamp() 함수로 최소값 최대값으로 적용 */
+  /* 1rem(16px) 이상 2rem(32px) 이하 */
+  font-size: clamp(1rem, 3vw, 2rem);
+
+  /* 고정 픽셀값 line-height */
+  /* line-height: 32px; */
+
+  /* 가급적 line-height는 number 단위로 */
+  line-height: 1.65;
+
+  font-variant: small-caps;
+}
+
+/* font 단축 속성 */
+.school{
+  display: block;
+  padding: 15px 0;
+  background: #fcf;
+  font: bold italic small-caps 20px/1.5 'Noto Serif KR',serif;
+}
+
+h1{
+  text-shadow: 2px 3px 15px rgba(0, 0, 0, 0.85);
+}
