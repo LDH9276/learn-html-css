@@ -1,0 +1,15 @@
+/* position */
+.frontend{
+  position: relative;
+  top: 10px; left: 25px;
+  background-color: #ffc;
+}
+
+.school{
+  span{
+    display: inline-block;
+    position: absolute;
+    /* width: 200px; height: 100px; */
+    background-color: #cff;
+  }
+}
