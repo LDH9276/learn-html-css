@@ -1,0 +1,22 @@
+/* 리스트 스타일 */
+/* list-style-type */
+
+.frontend > ul{
+  list-style: decimal;
+  padding: 0;
+  margin-bottom: 32px;
+  margin-left: 32px;
+  line-height: 2;
+}
+
+.frontend ol {
+  margin-left: 32px;
+  background-color: #ffc;
+  list-style-type: upper-roman;
+  /* list-style-position: inside; */
+}
+
+.bootcamp ul{
+  margin-left: 48px;
+  list-style-image: url(/src/assets/thumbnail/new.png);
+}
