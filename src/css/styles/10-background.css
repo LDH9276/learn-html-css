@@ -1,1 +1,43 @@
 /* background 속성 */
+
+:root{
+  --base-color: rgba(180 150 50 / 0.95);
+}
+
+.like{
+  color: var(--base-color);  
+}
+
+.wrapper{
+  border: 2px solid #fff000;
+  background: #0f0f00;
+  color: #fff;
+}
+
+/* background-image / background-repeat / background-position */
+.container {
+  width: 500px;
+  padding: 60px;
+  border: 1px solid red;
+  /* background-image: url(/src/assets/images/tree.png), url(/src/assets/images/cloud.png);
+  background-repeat: no-repeat , no-repeat;
+  background-position: 50% 0, 100% 0;
+  background-size: contain, 100px 50px; */
+
+  background: 
+  url(/src/assets/images/tree.png) no-repeat 50% 0 / contain, 
+  url(/src/assets/images/cloud.png) no-repeat 30% 0 / 100px 50px,
+  #fff000;
+
+
+  margin-block: 20px;
+}
+
+.frontend{
+  width: 500px;
+  padding: 25px;
+  border: 3px solid blue;
+  background-image: linear-gradient(to top, blue, #f00);
+  color: #fff;
+  border-radius: 20px;
+}
