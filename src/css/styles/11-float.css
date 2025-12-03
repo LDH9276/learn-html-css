@@ -1,0 +1,28 @@
+/* float */
+
+/* float로 발생한 레이아웃 이슈를 overflow로 해결. (정상적인 방법이 X) */
+.wrapper{
+  overflow: hidden;
+  border: 3px solid red;
+  img {
+    float: left;
+    border: 2px solid blue;
+  }
+  .like {
+    border: 2px solid palevioletred;
+  }
+}
+
+/* float: right */
+.container {
+  display: flow-root;
+  border: 5px solid green;
+  img {
+    float: right;
+    border: 2px solid blue;
+  }
+  img::after{ display: block; clear: both;content: " ";}
+  .lion {
+    border: 2px solid red;
+  }
+}
