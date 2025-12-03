@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="shortcut icon" href="/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/likelion.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="/src/ui/avatarts/avatars.css" />
+    <link rel="stylesheet" href="/src/ui/avatarts/a11y.css" />
+    <script type="module" src="/src/ui/js/copy-component.js"></script>
+  </head>
+  <body>
+    <a href="/index.html">Index로 이동</a>
+    <h1></h1>
+    <hr />
+    <h2>온라인 상태</h2>
+    <div class="ui-component">
+      <div class="avatar">
+        <img src="/src/assets/face/face1.webp" width="64" height="64" alt="아바타 이름" />
+        <span class="avatar-state is-online"><span class="sr-only">온라인</span></span>
+      </div>
+      <button type="button" class="copy-component">복사</button>
+    </div>
+    <h2>오프라인 상태</h2>
+    <div class="ui-component">
+      <div class="avatar">
+        <img src="/src/assets/face/face1.webp" width="64" height="64" alt="아바타 이름" />
+        <span class="avatar-state"><span class="sr-only">오프라인</span></span>
+      </div>
+      <button type="button" class="copy-component">복사</button>
+    </div>
+  </body>
+</html>
