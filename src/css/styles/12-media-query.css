@@ -1,0 +1,17 @@
+/* 미디어 쿼리 */
+
+body{
+  background: #ffc;
+}
+
+@media (max-width: 640px) {
+  body{
+    background: orangered;
+  }
+}
+
+@media (650px <= width < 1024px){
+  body{
+    background: palegoldenrod;
+  }
+}
