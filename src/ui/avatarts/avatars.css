@@ -1,3 +1,9 @@
+.ui-compoenet{
+    display: flex;
+    margin-block: 10px;
+    padding: 10px;
+}
+
 .avatar {
   --avatar-size: 64px;
   --state-size: 16px;
