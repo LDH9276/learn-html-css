@@ -1,7 +1,7 @@
 .ui-compoenet{
     display: flex;
-    margin-block: 10px;
     padding: 10px;
+    margin-block: 10px;
 }
 
 .avatar {
@@ -40,3 +40,31 @@
     background: var(--active-color);
   }
 }
+
+/* 아바타 레이아웃 */
+.avatar-list{
+
+  width: 596px;
+  height: 395px;
+  padding: 110px 130px;
+  margin: 0 auto;
+  box-shadow: 0 0 4px 1px currentColor;
+
+  .avatar-item{
+    float: left;
+    width: 64px;
+    height: 64px;
+    margin: 10px;
+    box-shadow: 0 0 0 1px currentColor;
+
+    &:nth-child(5){
+      clear: both;
+    }
+  }
+}
+
+/* 2줄로 만들기 */
+/* .avatar-item:nth-child(n + 2):nth-child(odd){
+  clear: left; 
+  background: bisque;
+} */
