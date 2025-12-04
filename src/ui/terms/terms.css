@@ -1,0 +1,58 @@
+
+.term {
+  /* float를 사용하면 display 속성을 flow-root로 사용. */
+  display: flow-root;
+  font-size: 0.875rem;
+  line-height: 1.5;
+
+  .term-subject{
+    color: #296897;
+    font-weight: 700;
+    margin-block: 5px;
+    margin-block-start: -3px;
+    margin-block-end: 4px;
+  }
+  .term-thumbnail{
+    display: block;
+    width: 60px;
+  }
+
+  /* display속성이 block을 지정하면 float가 필요하다. 즉, inline, inline-block도 float 걸어두면 유지관리에서 유용하다. */
+  .term-subject,
+  .term-description{
+    display: block;
+    float: inline-end;
+    width: calc(100% - 76px);
+  }
+  .term-thumbnail{
+    float: inline-start;
+  }
+}
+
+.term-wrap{
+  padding: 16px;
+  border: 1px solid #aaa;
+  background: linear-gradient(to bottom, #ccc, #eee);
+  border-radius: 5px;
+
+  h2 {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-block-end: 16px;
+  }
+
+  .term{
+    margin-block-start: 12px;
+  }
+
+  div.term:nth-of-type(even){
+    .term-subject,
+    .term-description{
+      float: inline-start;
+    }
+    .term-thumbnail{
+      float: inline-end;
+    }
+  }
+}

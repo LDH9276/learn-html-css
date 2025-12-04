@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="shortcut icon" href="/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/likelion.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="/src/ui/base.css" />
+    <link rel="stylesheet" href="/src/ui/terms/terms.css" />
+    <script type="module" src="/src/ui/js/copy-component.js"></script>
+  </head>
+  <body>
+    <a href="/index.html">Index로 이동</a>
+    <h1></h1>
+    <!-- div로 감싸는 유형 -->
+    <!-- <div class="term">
+      <img src="/src/assets/thumbnail/web-standards.png" alt="" />
+      <h3>웹 표준 이란?</h3>
+      <p>W3C 던채애소 규정한 웹 기술 사양에 대한 규칙을 말하며 표준 규격은...</p>
+    </div> -->
+
+    <!-- 용어를 캡션으로 제공하는 유형 - 다만 이미지를 설명하는 내용은 아님. -->
+    <!-- <figure class="term">
+      <img src="/src/assets/thumbnail/web-standards.png" alt="" />
+      <figcaption>
+        <strong>웹 표준 이란?</strong>
+        <p>W3C 던채애소 규정한 웹 기술 사양에 대한 규칙을 말하며 표준 규격은...</p>
+      </figcaption>
+    </figure> -->
+
+    <!-- 정의형 목록에 의한 유형 - 의미에 적합하나 컴포넌트에 적합하지 않음 -->
+    <!-- <dl class="term">
+      <div>
+        <dt>웹 표준 이란?</dt>
+        <dd><img src="/src/assets/thumbnail/web-standards.png" alt="" /></dd>
+        <dd>W3C 던채애소 규정한 웹 기술 사양에 대한 규칙을 말하며 표준 규격은...</dd>
+      </div>
+    </dl> -->
+
+    <p>레이아웃</p>
+    <section class="term-wrap">
+      <h2>웹 관련 용어</h2>
+      <div class="term left">
+        <strong class="term-subject">웹 표준 이란?</strong>
+        <img class="term-thumbnail" src="/src/assets/thumbnail/web-standards.png" alt="W3C 로고" />
+        <p class="term-description">W3C 단체에서 규정한 웹 기술 사양에 대한 규칙을 말하며 표준 규격은...</p>
+      </div>
+      <div class="term right">
+        <strong class="term-subject">웹 접근성이란?</strong>
+        <img class="term-thumbnail" src="/src/assets/thumbnail/web-a11y.png" alt="W3C 로고" />
+        <p class="term-description">모든 사용자가 신체적&middot;환경적 조건에 관계없이 웹 사이트에서 제공하는...</p>
+      </div>
+    </section>
+    <hr />
+    <p>컴포넌트</p>
+    <article class="term">
+      <strong class="term-subject">웹 접근성이란?</strong>
+      <img class="term-thumbnail" src="/src/assets/thumbnail/web-a11y.png" alt="W3C 로고" />
+      <p class="term-description">모든 사용자가 신체적&middot;환경적 조건에 관계없이 웹 사이트에서 제공하는...</p>
+    </article>
+  </body>
+</html>
