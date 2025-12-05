@@ -1,0 +1,47 @@
+/* 테이블 스타일링 */
+.members-wrapper {
+    overflow: scroll;
+    height: 500px;
+
+  .members {
+    border: 1px solid var(--black);
+    inline-size: 100%;
+    border-collapse: collapse;
+  }
+
+  .number {
+    inline-size: 15%;
+  }
+  .name {
+    inline-size: 25%;
+  }
+  .email {
+    inline-size: 30%;
+  }
+  .phone {
+    inline-size: 30%;
+  }
+
+  td, th{
+    line-height: 48px;
+    text-align: center;
+    align-content: center;
+  }
+
+  thead{
+    position: sticky;
+    top: 0;
+  }
+
+  tbody tr:nth-of-type(odd){
+    background: var(--white);
+  }
+  tbody tr:nth-of-type(even){
+    background: #efefef;
+  }
+
+  tfoot, th{
+    background: var(--black);
+    color: var(--white);
+  }
+}
