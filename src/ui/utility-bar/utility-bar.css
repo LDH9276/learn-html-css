@@ -1,0 +1,41 @@
+.utility-bar{
+  --spacing : 8px;
+
+  display: flow-root;
+  padding: calc(var(--spacing) / 2);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+
+  li {
+    float: inline-start;
+
+    span, a{
+      float: inline-start;
+      padding: calc(var(--spacing) / 2);
+    }
+  }
+}
+
+.utility-bar-before{
+  --spacing : 8px;
+
+  display: flow-root;
+  padding: calc(var(--spacing) / 2);
+  background: bisque;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+
+  li{
+    float: inline-start;
+  }
+
+  li:nth-child(n + 2)::before{
+    content: ':';
+  }
+
+  li:nth-child(n + 2)::before, a{
+    display: block;
+    float: inline-start;
+    padding: calc(var(--spacing) / 2);
+  }
+}
