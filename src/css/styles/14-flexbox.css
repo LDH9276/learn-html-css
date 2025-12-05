@@ -1,0 +1,146 @@
+/* Flex 레이아웃 */
+/* 영역 별 배경 색상 */
+div {
+  background: var(--yellow);
+
+  > div:nth-child(1) {
+    background: var(--pink);
+  }
+  > div:nth-child(2) {
+    background: var(--green);
+  }
+  > div:nth-child(3) {
+    background: var(--blue);
+  }
+  > div:nth-child(4) {
+    background: var(--orange);
+  }
+}
+
+/* Flex - flex-direction / order */
+.like {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5em;
+
+  div:nth-child(even) {
+    order: 1;
+  }
+}
+
+/* flex-wrap , flex-flow*/
+.lion {
+  display: flex;
+  /* flex-direction: row-reverse;
+  flex-wrap: wrap; */
+  flex-flow: wrap row;
+  padding: 0.5em;
+  inline-size: 600px;
+  block-size: 200px;
+  justify-content: space-evenly;
+
+  > div {
+    inline-size: 150px;
+  }
+}
+
+/* justify-content, align-items */
+.euid {
+  display: flex;
+  flex-flow: nowrap row;
+  padding: 0.5em;
+  block-size: 200px;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+
+/* align-content */
+.frontend {
+  display: flex;
+  flex-flow: wrap row;
+  inline-size: 400px;
+  block-size: 200px;
+
+  /* flex의 기본 속성 */
+  /* justify-content: start; */
+  /* align-items: stretch; */
+
+  /* nowrap일때는 align-items 속성 */
+  /* align-items: stretch; */
+
+  /* wrap일때는 align-content 속성 */
+  align-content: space-between;
+
+  > div {
+    inline-size: 200px;
+  }
+}
+
+.bootcamp {
+
+  /* 플렉스 속성을 기본으로 선언할 때 기본 옵션 */
+  display: flex;
+  /* 플렉스의 넘치기 속성 - 넘치는 방향으로 선언한다. */
+  flex-flow: wrap row;
+
+  /* 플렉스 자식의 아이템의 갭 row - column */
+  /* gap: 0.5em 0em; */
+  gap: 0 1em;
+  justify-content: start;
+  align-items: stretch;
+
+  /* padding: 1em; */
+
+  inline-size: 400px;
+  block-size: 200px;
+
+  > div{
+    inline-size:180px;
+  }
+
+  .bootcamp-item1{
+    border: 1px solid red;
+    
+  }
+
+}
+
+.school{
+  display: flex;
+  flex-flow: nowrap row;
+  gap: 1em;
+  inline-size: 600px;
+
+  > div{
+
+    /* flex 값은 glow, basis, shrink*/
+    flex: 1 0 0;
+    
+    /* 기준값을 주지 않으면 auto, 컨텐츠에 따라 길이 조절 */
+    /* flex-basis: 0; */
+    
+    /* basis, glow값 없다면 아이템이 클 경우, 내부적으로 맞추어 축소시킨다. */
+    inline-size: 250px;
+
+    /* 
+    반응형 레이아웃에서 
+    glow와 basis shrink를 적절하게 쓰면 편하다. 
+    세 값은 gap도 포함이 된다. (width 값을 주지 않아도 된다.)
+    */
+  }
+
+  /* 이렇게 각각 glow를 주면 레이아웃이 깨지지 않는다. */
+  /* .school-item1{
+    flex-grow: 1;
+  }
+  .school-item2{
+    flex-grow: 2;
+  }
+  .school-item3{
+    flex-grow: 3;
+  }
+  .school-item4{
+    flex-grow: 4;
+  } */
+
+}
