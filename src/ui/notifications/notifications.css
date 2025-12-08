@@ -1,0 +1,53 @@
+
+:root{
+  --greenColor : #22BE61;
+  --grayColor : #929B90;
+  --borderColor : #F9FEFE;
+  --paddingSize : 20px;
+  --roundedSize : 8px;
+}
+
+/* 컴포넌트 */
+.notification{
+  display: flow-root;
+  padding: var(--paddingSize);
+  border: 1px solid var(--borderColor);
+  border-radius: var(--roundedSize);
+  box-shadow: 0 0 2px rgba(114, 119, 124, 0.2);
+
+  svg{
+    float: left;
+    align-self: center;
+  }
+
+  div{
+    float: left;
+    width: calc(100% - 100px);
+    margin-inline: 20px;
+
+    strong{
+      font-weight: 600;
+      font-size: 1.125rem;
+    }
+    p{
+      color: var(--grayColor);
+      font-weight: 400;
+      font-size: 0.875rem;
+      margin-block-start: 0.25rem;
+    }
+  }
+
+
+  time{
+    float: left;
+    width: 32px;
+    font-weight: 700;
+    font-size: 0.688rem;
+  }
+}
+
+.notification.isGreen{
+  strong, time{
+    color: var(--greenColor);
+  }
+}
