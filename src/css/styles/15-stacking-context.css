@@ -1,0 +1,54 @@
+* { font-family: 'SUIT Variable';}
+
+/* isolation 속성 */
+.cafe-w{
+  position: relative;
+  border: 10px solid currentColor;
+  background: beige;
+  inline-size: 500px;
+  block-size: 200px;
+  isolation: isolate;
+
+  .hero{
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.5;
+  }
+
+  .star {
+    background: #fff;
+    border-radius: 50%;
+  }
+
+  .text {
+    padding: 1em;
+    background: yellow;
+  }
+}
+
+/* z-index 속성 */
+.euid {
+  position: relative;
+  width: 500px;
+  height: 100px;
+  background: rgba(255, 255, 159, 0.5);
+
+  .like {
+    position: absolute;
+    bottom: 0;
+    background: skyblue;
+    z-index: -1;
+  }
+  .lion {
+    position: relative;
+    background: orange;
+  }
+  .bootcamp {
+    position: relative;
+    top: -5px;
+    left: 10px;
+    background: pink;
+  }
+}
+

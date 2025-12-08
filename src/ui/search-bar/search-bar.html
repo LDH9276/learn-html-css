@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>검색어 입력서식</title>
+    <link rel="shortcut icon" href="/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/likelion.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="/src/ui/search-bar/search-bar.css" />
+    <script type="module" src="/src/ui/js/copy-component.js"></script>
+  </head>
+  <body class="spacing-20">
+    <a href="/index.html">Index로 이동</a>
+    <h1>검색어 입력서식</h1>
+
+    <div class="search-bar">
+      <!-- 네이버 로고 -->
+      <a class="logo" href="https://www.naver.com/" target="_blank" rel="noopener norefferrer" aria-label="네이버 홈" title="네이버 홈으로 이동합니다.">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H8L15.5 12V0H24V24H15.1875L8 12.5L8 24H0V0Z" fill="url(#paint0_linear_4375_3)" />
+          <defs>
+            <linearGradient id="paint0_linear_4375_3" x1="4.5" y1="-1.93715e-07" x2="20.5" y2="24" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#1BF008" />
+              <stop offset="1" stop-color="#03CCA8" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </a>
+
+      <!-- 검색 폼 -->
+      <form action="/" method="get" class="searchbar-form">
+        <div class="input-wrapper">
+          <label for="searchKeyword" class="sr-only">검색어</label>
+          <input type="text" name="keyword" id="searchKeyword" placeholder="검색어를 입력하세요." required />
+        </div>
+        <button class="circle-gradient" type="submit" aria-label="검색"></button>
+      </form>
+    </div>
+  </body>
+</html>
