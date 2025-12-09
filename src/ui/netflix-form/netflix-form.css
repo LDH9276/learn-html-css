@@ -1,0 +1,226 @@
+/* 컬러 */
+:root {
+  /* Color styles */
+  --white: #ffffff;
+  --black: #010101;
+  --red-100: #faced0;
+  --red-200: #f59da1;
+  --red-300: #ef6b72;
+  --red-400: #ea3a43;
+  --red-500: #e50914;
+  --red-600: #b70710;
+  --red-700: #89050c;
+  --red-800: #5c0408;
+  --red-900: #2e0204;
+  --blue-100: #cce3fb;
+  --blue-200: #99c6f7;
+  --blue-300: #66aaf3;
+  --blue-400: #338def;
+  --blue-500: #0071eb;
+  --blue-600: #005abc;
+  --blue-700: #00448d;
+  --blue-800: #002d5e;
+  --blue-900: #00172f;
+  --green-100: #d5f8e3;
+  --green-200: #acf2c8;
+  --green-300: #82ebac;
+  --green-400: #58e590;
+  --green-500: #2ede75;
+  --green-600: #25b25d;
+  --green-700: #1c8546;
+  --green-800: #13592f;
+  --green-900: #092c17;
+  --gray-100: #e3e3e3;
+  --gray-200: #c8c8c8;
+  --gray-300: #acacac;
+  --gray-400: #919191;
+  --gray-500: #757575;
+  --gray-600: #5e5e5e;
+  --gray-700: #464646;
+  --gray-800: #2f2f2f;
+  --gray-900: #171717;
+}
+
+/* 콤보박스 */
+.combo-box{
+
+  --text-color: var(--gray-500);
+
+  display: inline-flex;
+  flex-flow: nowrap row;
+  gap: 12px;
+  position: relative;
+  border: 1px solid currentColor;
+  color: var(--text-color);
+  align-items: center;
+  justify-content: start;
+  border-radius: 4px;
+
+
+
+  svg{
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    pointer-events: none;
+  }
+
+  .lang-icon{
+    left: 8px;
+  }
+  .dropdown-icon{
+    right: 8px;
+  }
+
+  select{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 8px 20px 8px 28px;
+    border: 0;
+    background-color: transparent;
+    appearance: none;  
+
+    &:focus{
+      /* border-radius: 6px;
+      outline: 4px solid var(--red-500);
+      outline-offset: 6px; */
+
+      outline: none;
+      box-shadow: 0px 0px 2px 1px var(--gray-600);
+    }
+
+  }
+}
+
+/* .like{
+  display: flow-root;
+  padding: 10px 100px;
+  border: 1px solid red;
+
+  .lion{
+    position: relative;
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin-left: -50px;
+    border-radius: 50%;
+
+    &:hover{
+      z-index: 1;
+    }
+  }
+
+  .lion:first-of-type{
+    background: yellow;
+  }
+  .lion:last-of-type{
+    background: pink;
+  }
+} */
+
+.ui-component{
+  display: flex;
+  column-gap: 12px;
+}
+
+.button{
+  display: flex;
+  flex-flow: nowrap row;
+  max-height: 48px;
+  padding: 15px 20px;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  column-gap: 8px;
+  vertical-align: middle;
+
+  &.button-fill{
+    background: var(--red-400);
+    color: var(--white);
+
+    &[disabled]{
+      background: var(--gray-500);
+    }
+  }
+
+  &.button-outline{
+    border: 1px solid var(--red-400);
+    background: transparent;
+    color: var(--red-400);
+
+    &[disabled]{
+      border: 1px solid var(--gray-500);
+      color: var(--gray-500);
+    }
+  }
+  
+  &.rounded-xs{
+    border-radius: 4px;
+  }
+  
+  &.rounded-md{
+    border-radius: 8px;
+  }
+
+  &[disabled]{
+    cursor: not-allowed;
+  }
+  
+  &.button-none{
+    background: transparent;
+    color: transparent;
+  }
+
+  &:focus{
+    outline: none;
+  }
+
+  &:focus-visible{
+    outline: 3px solid red;
+  }
+
+}
+
+
+.input-wrapper{
+  position: relative;
+  background: pink;
+
+  label{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: lime;
+    translate: 16px -50%;
+  }
+
+  /* 방법 1 */
+  /* &:focus-within label{
+    font-size: 12px;
+  } */
+
+  &:has(input:user-valid) label{
+    top: 0;
+    font-size: 10px;
+    translate: 16px 0;
+  }
+
+  input{
+    width: 100%;
+    padding: 8px 16px;
+    border: 1px solid var(--gray-500);
+    background-color: tan;
+
+    &:focus{
+      outline: none;
+    }
+
+    &:focus-visible{
+      box-shadow: 0 0 2px 1px var(--red-500);
+    }
+  }
+}
+
+

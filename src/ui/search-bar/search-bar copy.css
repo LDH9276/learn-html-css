@@ -30,7 +30,6 @@
     align-items: center;
   }
 
-
 }
 
 .searchbar-form{
@@ -43,23 +42,15 @@
 
   .input-wrapper{
     flex: 1 1 0;
-    width: 100%;
     height: 100%;
   }
 
   input{
     width: 100%;
     height: 100%;
-    background: transparent;
+    border: none;
     font-size: 0.875rem;
     margin-inline-start: 4px;
-    appearance: none;
-  }
-  
-  /* X 버튼은 Safari, Chrome, Edge, Opera 등 webkit 및 blink 엔진을 사용하는 웹브라우저의 기본 스타일 */
-  /* X 버튼을 제거하고 싶다면 :-webkit-search-cancel-button 선택자를 사용하여 display 속성 값을 none으로 지정 */
-  [type='search']::-webkit-search-cancel-button {
-    display: none;
   }
 }
 
