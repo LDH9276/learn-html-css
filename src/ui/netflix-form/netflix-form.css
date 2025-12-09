@@ -93,31 +93,32 @@
   }
 }
 
-/* .like{
+.like {
   display: flow-root;
+  display: flex;
+  flex-flow: nowrap row;
   padding: 10px 100px;
   border: 1px solid red;
 
-  .lion{
-    position: relative;
-    float: left;
+  .lion {
     width: 80px;
     height: 80px;
     margin-left: -50px;
     border-radius: 50%;
 
-    &:hover{
+    &:hover {
       z-index: 1;
     }
   }
 
-  .lion:first-of-type{
+  .lion:first-child {
     background: yellow;
   }
-  .lion:last-of-type{
+
+  .lion:last-child {
     background: pink;
   }
-} */
+}
 
 .ui-component{
   display: flex;

@@ -1,0 +1,32 @@
+/* CSS 마스크 */
+
+.like {
+  display: inline-block;
+  padding: 20px;
+  border: 10px solid green;
+  background: red;
+
+  mask-image: url(/src/assets/svg/star.svg);
+  mask-origin: padding-box;
+  mask-repeat: no-repeat;
+  mask-size: 50px 50px;
+  mask-position: 0 0;
+  transition: mask-position 2.25s;
+
+  &:hover{
+    mask-position: 100% 0;
+  }
+
+}
+
+button{
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 0;
+  background-color: green;
+  color: #fff;
+  font-size: 12px;
+  
+  mask-image: linear-gradient(to bottom, transparent 0% 35%, #000 35% 65%, transparent 65% 100%), linear-gradient(to right, transparent 0% 35%, #000 35% 65%, transparent 55% 100%);
+}
