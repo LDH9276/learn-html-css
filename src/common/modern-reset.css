@@ -25,8 +25,8 @@ dd {
 ul,
 ol {
   list-style: none;
-  margin: 0;
   padding-left: 0;
+  margin: 0;
 }
 
 /* Set core root defaults */
@@ -37,8 +37,8 @@ html:focus-within {
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  text-rendering: optimizeSpeed;
   line-height: 1.15;
+  text-rendering: optimizeSpeed;
 }
 
 /* A elements that don't have a class get default styles */
@@ -49,15 +49,16 @@ a:not([class]) {
 /* Make images easier to work with */
 img,
 picture {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /* iframe, video 요소의 기본 스타일 */
 iframe,
 video {
-  width: 100%;
   display: block;
+  width: 100%;
 }
 
 /* Inherit fonts for inputs and buttons */
