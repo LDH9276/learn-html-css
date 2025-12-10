@@ -31,11 +31,11 @@
 
 .input {
   input {
-    border: 1px solid var(--gray-200);
     inline-size: 100%;
     min-inline-size: 0;
     block-size: 48px;
     padding-inline-start: 0.5em;
+    border: 1px solid var(--gray-200);
 
     &:read-only {
       background: var(--gray-100);
@@ -47,10 +47,10 @@
   }
 
   .error-message {
-    color: var(--red-100);
-    font-size: 0.75rem;
     visibility: hidden;
     margin-block-start: 0.5em;
+    color: var(--red-100);
+    font-size: 0.75rem;
   }
 }
 
@@ -82,8 +82,8 @@
   /* 배경 이미지 활용 */
   &.bg-icon {
     label {
-      background: url(/src/assets/naver/unchecked.svg) no-repeat;
       padding-inline-start: 32px;
+      background: url(/src/assets/naver/unchecked.svg) no-repeat;
     }
 
     input:checked + label {
@@ -105,17 +105,17 @@
     label {
       display: flex;
       flex-flow: nowrap row;
-      background: yellow;
-      align-items: center;
       column-gap: 8px;
+      align-items: center;
+      user-select: none;
     }
   }
 
   input {
     position: absolute;
-    margin: 0;
     inline-size: 24px;
     block-size: 24px;
+    margin: 0;
     inset-inline-start: 0;
     inset-block-start: 0;
     appearance: none;
@@ -138,19 +138,19 @@
 
   input {
     position: absolute;
+    inline-size: 2em;
+    block-size: 24px;
     margin: 0;
     inset-inline-start: 0;
     inset-block-start: 0;
-    inline-size: 2em;
-    block-size: 24px;
     appearance: none;
   }
 
   label {
     display: block;
+    align-content: center;
     inline-size: 2em;
     block-size: 24px;
-    align-content: center;
 
     &::after {
       content: 'OFF';
@@ -163,3 +163,70 @@
     }
   }
 }
+
+/* 네이버 로그인 레이아웃 스타일 */
+
+.header {
+  padding-block: 70px 45px;
+  background: yellow;
+
+  /* 로고 */
+  .logo{
+    margin-inline:auto;
+  }
+
+  @media (width>= 768px) {
+    padding-block: 100px 50px;
+  }
+}
+
+.main{
+  padding-inline: 15px;
+  background: pink;
+
+  .login-form{
+    display: flex;
+    flex-flow: nowrap column;
+    row-gap: 10px;
+    background-color: tan;
+
+    @media (width>= 768px) {
+        inline-size: 460px;
+        margin-inline: auto;
+    }
+  }
+  .checkbox-wrapper{
+    display: flex;
+    flex-flow: nowrap row;
+    column-gap: 8px;
+    align-items: center;
+    order: 1;
+
+    .textlink-new, 
+    .switch{
+      display: none;
+    }
+    .checkbox{
+      margin-inline-start: auto;
+    }
+
+    @media (width >= 768px) {
+      .textlink-new, 
+      .switch{
+        display: block;
+      }
+      .textlink-new{
+        margin-inline-start: auto;
+      }
+      .checkbox{
+        margin-inline-start: 0;
+      }
+    }
+  }
+
+  .button{
+    inline-size: 100%;
+  }
+
+}
+
