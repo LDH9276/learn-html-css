@@ -103,3 +103,38 @@
     grid-area: euid7;
   }
 }
+/* 그리드 아이템 정렬 */
+/* fr 단위 gap */
+.frontend{
+  display: grid;
+  /* grid-template-columns: 2fr repeat(2, 1fr) 6fr; */
+  /* grid-template-columns: 20% repeat(2, 10%) 60%; */
+  grid-template-columns: 50px 100px 80px 120px 50px;
+
+  grid-auto-rows: 40px;
+  gap: 10px;
+
+  /* 콘텐츠 정렬 */
+  /* align-content: center;
+  justify-content: center; */
+  place-content: center;
+  /* align-items: center; */
+
+  /* 아이템 정렬 */
+  place-items: center;
+
+  inline-size: 500px;
+  block-size: 300px;
+
+  .frontend4{
+    align-self: end;
+    justify-self: end;
+  }
+
+  /* 세로 가운데 정렬 align-content도 가능! */
+  /* > div {
+    align-content: center;
+    text-align: center;
+  } */
+
+}
