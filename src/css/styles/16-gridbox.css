@@ -1,0 +1,39 @@
+.like,
+.lion,
+.euid,
+.frontend {
+  > div:nth-child(1) {
+    background: var(--pink);
+  }
+  > div:nth-child(2) {
+    background: var(--blue);
+  }
+  > div:nth-child(3) {
+    background: var(--coral);
+  }
+  > div:nth-child(4) {
+    background: var(--green);
+  }
+  > div:nth-child(5) {
+    background: var(--purple);
+  }
+  > div:nth-child(6) {
+    background: var(--gray);
+  }
+  > div:nth-child(7) {
+    background: var(--apricot);
+  }
+}
+
+.like{
+  display: grid;
+
+  /* grid-template 속성은 행 / 열 순으로 */
+  /* grid-template: repeat(5, 50px) / repeat(5, 100px); */
+
+  /* 유지보수와 파악을 위해 따로 작성하는 것이 좋다. */
+  grid-template-rows: repeat(5, 50px);
+  grid-template-columns: repeat(5, 100px);
+
+  border: 1px solid #000;
+}
