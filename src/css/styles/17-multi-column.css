@@ -1,0 +1,38 @@
+/* 다단 레이아웃 */
+/* column-count 속성 */
+.lion {
+  background: pink;
+  column-count: 3;
+  column-fill: balance;
+}
+
+/* column-width 속성 */
+.like {
+  block-size: 150px;
+  background: yellow;
+  column-width: 200px;
+  column-fill: auto;
+}
+
+/* columns 속성 */
+/* column-gap 속성 */
+/* column-rule 속성 */
+/* column-span 속성 */
+/* column-fill 속성 */
+.euid {
+  column-gap: 40px;
+  background: skyblue;
+  columns: 200px 3;
+  /* column-rule-width: 10px;
+  column-rule-style: double;
+  column-rule-color: red; */
+  column-rule: 10px double red;
+  column-fill: balance;
+
+  h2 {
+    padding: 10px;
+    background: teal;
+    color: white;
+    column-span: all;
+  }
+}
