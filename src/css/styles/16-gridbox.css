@@ -39,7 +39,7 @@
   border: 1px solid #000;
 }
 
-/* 그리스 아이템 배치 - 라인 기반 */
+/* 그리드 아이템 배치 - 라인 기반 */
 .lion{
   display: grid;
   grid-template-rows: repeat(5, 50px);
@@ -67,4 +67,39 @@
     grid-area: 2 / 1 / 6 / 3;
   }
 
+}
+
+/* 그리드 아이템 배치 - 이름 기반 */
+.euid{
+  display: grid;
+  grid-template-areas: 
+  'euid1 euid1 euid2 euid2 euid3'
+  'euid1 euid1 euid2 euid2 euid3'
+  'euid4 euid4 euid5 euid5 euid5'
+  'euid4 euid4 euid5 euid5 euid5'
+  'euid6 euid6 euid6 euid7 euid7';
+  grid-template-rows: repeat(5, 50px);
+  grid-template-columns: repeat(5, 100px);
+
+  .euid1{
+    grid-area: euid1;
+  }
+  .euid2{
+    grid-area: euid2;
+  }
+  .euid3{
+    grid-area: euid3;
+  }
+  .euid4{
+    grid-area: euid4;
+  }
+  .euid5{
+    grid-area: euid5;
+  }
+  .euid6{
+    grid-area: euid6;
+  }
+  .euid7{
+    grid-area: euid7;
+  }
 }
