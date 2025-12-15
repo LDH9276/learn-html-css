@@ -1,0 +1,55 @@
+/* 서브 그리드 */
+
+/* 컴포넌트 */
+.card {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr);
+  row-gap: 1em;
+  padding: 1em;
+  border: 1px solid currentColor;
+
+  figure {
+    order: -1;
+    aspect-ratio: 2/1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 30% 40%;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+  }
+
+  a {
+    justify-self: end;
+    padding: 16px;
+    border-radius: 4px;
+    background: darkblue;
+    color: white;
+  }
+}
+
+/* 레이아웃 */
+/* .cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  box-shadow: 0 0 0 5px green;
+} */
+
+/* 레이아웃 */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  box-shadow: 0 0 0 5px green;
+
+  .card {
+    grid-template-rows: subgrid;
+    grid-row: span 4;
+  }
+}

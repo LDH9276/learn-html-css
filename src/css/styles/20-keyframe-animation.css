@@ -1,0 +1,249 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+  grid-auto-rows: 18.75rem;
+  gap: 1.25rem;
+  color: #fff;
+
+  hr {
+    display: none;
+  }
+}
+
+.case {
+  padding: 2.5rem;
+  border: 1px solid currentColor;
+
+  strong {
+    display: block;
+    margin-block-end: 10px;
+    color: #37b24d;
+    font-size: 20px;
+  }
+
+  button {
+    padding: 0.5em 1em;
+    border-radius: 0.5rem;
+    color: #fff;
+  }
+
+  .toggle-animation {
+    background-color: #4263eb;
+  }
+
+  .toggle-animation.paused {
+    background-color: #e03131;
+  }
+
+  .reset-animation {
+    background-color: #15aabf;
+  }
+
+  .target-animation {
+    align-content: center;
+    margin-top: 2.5rem;
+    margin-block-start: 2.5rem;
+    padding: 0.625rem;
+    border-radius: 0.5rem;
+    background: linear-gradient(135deg, #37b24d, #2b8a3e);
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+/* fade 애니메이션 */
+@keyframes fade {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@keyframes shrink {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@keyframes shrink {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    translate: 0 0%;
+  }
+  100% {
+    translate: 0 -12.5%;
+  }
+}
+
+@keyframes shake {
+  0% {
+    translate: 0 0%;
+  }
+  100% {
+    translate: -12.5% 0;
+  }
+}
+
+@keyframes spin {
+  0% {
+    rotate: 0;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+@keyframes flip {
+  0% {
+    rotate: x 0;
+  }
+  100% {
+    rotate: x 90deg;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.1;
+  }
+}
+
+@keyframes wobble {
+  0%,
+  100% {
+    transform: translateX(0%) rotate(0deg);
+  }
+  15% {
+    transform: translateX(-15px) rotate(-5deg);
+  }
+  30% {
+    transform: translateX(10px) rotate(3deg);
+  }
+  45% {
+    transform: translateX(-10px) rotate(-3deg);
+  }
+  60% {
+    transform: translateX(5px) rotate(2deg);
+  }
+  75% {
+    transform: translateX(-5px) rotate(-1deg);
+  }
+}
+
+
+/* fade 애니메이션 */
+.fade {
+  .target-animation {
+    animation: fade 0.2s infinite alternate ease-in-out both;
+    animation-play-state: paused;
+  }
+}
+.shrink {
+  .target-animation {
+    animation: shrink 0.2s infinite alternate ease-in-out both;
+    animation-play-state: paused;
+  }
+}
+.bounce {
+
+  .target-animation {
+    animation: bounce 0.2s infinite alternate ease-in-out both;
+    animation-play-state: paused;
+  }
+}
+.shake {
+  .target-animation {
+    animation: shake 0.2s infinite alternate ease-in-out both;
+    animation-play-state: paused;
+  }
+}
+.flip {
+  perspective: 500px;
+  .target-animation {
+    animation: flip 0.2s infinite alternate ease-in-out both;
+    animation-play-state: paused;
+  }
+}
+.pulse {
+  background: yellow;
+  perspective: 500px;
+
+  .target-animation {
+    animation: pulse 0.2s infinite alternate ease-in-out both;
+    animation-play-state: paused;
+  }
+}
+.wobble {
+  .target-animation {
+    animation: wobble 0.8s infinite alternate ease-in-out both;
+    animation-play-state: paused;
+  }
+}
+.spin {
+
+  .target-animation {
+    width: 120px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: conic-gradient(red 0% 25%, green 25% 50%, blue 50% 75%, purple 75% 100%);
+    color: #fff;
+    animation: spin 0.5s infinite ease-in-out;
+    animation-play-state: paused;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+/* border rotate 애니메이션 */
+.rotate {
+  .target-animation {
+    --angle: 0deg;
+    position: relative;
+
+    width: 120px;
+    height: 120px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: -1;
+      width: 110%;
+      height: 110%;
+      border-radius: inherit;
+      background: conic-gradient(from var(--angle), red 0 30%, transparent 30% 100%);
+      animation: angle 2s infinite linear;
+      animation-play-state: paused;
+      translate: -50% -50%;
+    }
+  }
+}
+
+@keyframes angle {
+  0% {
+      --angle: 0deg;
+  }
+  100% {
+      --angle: 360deg;
+  }
+}
