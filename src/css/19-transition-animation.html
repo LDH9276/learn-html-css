@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition 애니메이션 | Likelion Bootcamp</title>
+    <link rel="shortcut icon" href="/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/likelion.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="/src/css/styles/19-transition-animation.css" />
+
+    <script type="module">
+      // DOM 선택부
+      const toggleButtons = document.querySelectorAll('.toggle');
+
+      // 함수 구현부
+      function toggleActiveOnSibling(button) {
+        const sibling = button.nextElementSibling;
+        if (!sibling) return;
+        sibling.classList.toggle('active');
+      }
+
+      // 이벤트 바인딩 영역
+      toggleButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          toggleActiveOnSibling(button);
+        });
+      });
+    </script>
+  </head>
+  <body class="spacing-20">
+    <a href="/index.html">Index로 이동</a>
+    <h1>Transition 애니메이션</h1>
+
+    <div class="container">
+      <div class="wrapper">
+        <button type="button" class="toggle">애니메이션 토글</button>
+        <div class="like">
+          <p>멋쟁이 사자처럼 프론트엔드 부트캠프 16기 화이팅!</p>
+        </div>
+      </div>
+      <div class="wrapper">
+        <button type="button" class="toggle">애니메이션 토글</button>
+        <div class="lion">
+          <p>멋쟁이</p>
+        </div>
+      </div>
+      <div class="wrapper">
+        <button type="button" class="toggle">애니메이션 토글</button>
+        <div class="euid">
+          <p>사자처럼</p>
+        </div>
+      </div>
+      <div class="wrapper">
+        <button type="button" class="toggle">애니메이션 토글</button>
+        <div class="bootcamp">
+          <p>16기</p>
+        </div>
+      </div>
+      <div class="wrapper">
+        <button type="button" class="toggle">애니메이션 토글</button>
+        <div class="frontend">
+          <p>16기</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
