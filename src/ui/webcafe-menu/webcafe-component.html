@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웹카페 메뉴</title>
+    <link rel="shortcut icon" href="/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/likelion.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="/src/ui/webcafe-menu/webcafe-menu.css" />
+    <script type="module" src="/src/ui/js/copy-component.js"></script>
+  </head>
+  <body class="spacing-20">
+    <a href="/index.html">Index로 이동</a>
+    <h1>웹카페 메뉴</h1>
+    <div class="ui-component">
+      <div class="menu-item">
+        <button type="button" popovertarget="subMenu-0" class="menu-button">메뉴 버튼</button>
+        <ul class="sub-menu" popover id="subMenu-0">
+          <li><a href="/">메뉴 링크 1</a></li>
+          <li><a href="/">메뉴 링크 2</a></li>
+          <li><a href="/">메뉴 링크 3</a></li>
+        </ul>
+      </div>
+      <button type="button" class="copy-component">복사</button>
+    </div>
+  </body>
+</html>

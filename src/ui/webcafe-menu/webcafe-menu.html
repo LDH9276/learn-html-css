@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웹카페 메뉴</title>
+    <link rel="shortcut icon" href="/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/likelion.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="/src/ui/webcafe-menu/webcafe-menu.css" />
+    <script type="module" src="/src/ui/js/copy-component.js"></script>
+  </head>
+  <body class="spacing-20">
+    <a href="/index.html">Index로 이동</a>
+    <h1>웹카페 메뉴</h1>
+    <nav class="navigation">
+      <h2 class="sr-only">메인 메뉴</h2>
+      <ul class="menu">
+        <li class="menu-item">
+          <button popovertarget="menuHtml" type="button" class="menu-button">HTML에 대해</button>
+          <ul popover id="menuHtml" class="sub-menu menu-html">
+            <li>
+              <a href="/">HTML5 소개</a>
+            </li>
+            <li>
+              <a href="/">레퍼런스 소개</a>
+            </li>
+            <li>
+              <a href="/">활용예제</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <button popovertarget="menuCss" type="button" class="menu-button">CSS에 대해</button>
+          <ul popover id="menuCss" class="sub-menu menu-css">
+            <li>
+              <a href="/">CSS 소개</a>
+            </li>
+            <li>
+              <a href="/">CSS2 VS CSS3</a>
+            </li>
+            <li>
+              <a href="/">CSS 애니메이션</a>
+            </li>
+            <li>
+              <a href="/">CSS Framework</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <button popovertarget="menuStandards" type="button" class="menu-button">웹표준</button>
+          <ul popover id="menuStandards" class="sub-menu menu-standards">
+            <li>
+              <a href="/">웹표준 이란?</a>
+            </li>
+            <li>
+              <a href="/">W3C</a>
+            </li>
+            <li>
+              <a href="/">HTML5의 현재와 미래</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <button popovertarget="menuAccessibility" type="button" class="menu-button">웹 접근성</button>
+          <ul popover id="menuAccessibility" class="sub-menu menu-accessibility">
+            <li>
+              <a href="/">웹 접근성의 개요</a>
+            </li>
+            <li>
+              <a href="/">장애 환경의 이해</a>
+            </li>
+            <li>
+              <a href="/">장차법</a>
+            </li>
+            <li>
+              <a href="/">웹 접근성 품질마크</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <button popovertarget="menuQna" type="button" class="menu-button">묻고 답하기</button>
+          <ul popover id="menuQna" class="sub-menu menu-qna">
+            <li>
+              <a href="/">묻고 답하기</a>
+            </li>
+            <li>
+              <a href="/">FAQ</a>
+            </li>
+            <li>
+              <a href="/">1대1 질문</a>
+            </li>
+            <li>
+              <a href="/">웹표준</a>
+            </li>
+            <li>
+              <a href="/">웹 접근성</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <button popovertarget="menuArchive" type="button" class="menu-button">자료실</button>
+          <ul popover id="menuArchive" class="sub-menu menu-archive">
+            <li>
+              <a href="/">공개 자료실</a>
+            </li>
+            <li>
+              <a href="/">이미지 자료실</a>
+            </li>
+            <li>
+              <a href="/">웹표준 자료실</a>
+            </li>
+            <li>
+              <a href="/">웹 접근성 자료실</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>

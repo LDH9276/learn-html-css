@@ -12,8 +12,93 @@
   --font-13 : 0.8125rem;
   --font-16 : 1rem;
   --font-bold : bold; 
+
+  --spacing: 16px;
 }
 
+/* 유튜브 영상 */
+.ediya-youtube {
+  figure {
+    aspect-ratio: 16 / 9;
+    iframe {
+      width: 100%; 
+      height: 100%;
+    }
+  }
+}
+
+/* 공지사항 - grid 레이아웃 */
+.notice {
+  display: grid;
+  grid-template-columns: 125px minmax(200px, 1fr);
+  min-inline-size: 320px;
+  background: yellow;
+
+  .notice-btn-wrap,
+  .notice-title{
+    grid-area :  1 / 1 / 2 / 2;
+    background: var(--blue-200);
+  }
+
+  .notice-title{
+    padding: var(--spacing);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  article{
+    padding: var(--spacing);
+    background: var(--white);
+
+    .notice-subject{
+      color: var(--blue-200);
+    }
+
+    .notice-date{
+      display: block;
+      margin-top: 5px;
+      color: var(--gray);
+    }
+
+    .notice-desc{
+      margin-top: 8px;
+      line-height: 1.5;
+      letter-spacing: -0.02em;
+    }
+  }
+
+  .notice-btn-wrap{
+    display: flex;
+    flex-flow: nowrap row;
+    place-self: end;
+
+
+    button{
+      padding: 0;
+      border: 0;
+      background: transparent;
+    }
+
+    button > svg{
+      vertical-align: middle;
+    }
+
+    button:first-of-type{
+      margin-right: -1px;
+      padding: 16px 0 16px 16px;
+    }
+
+    button:last-of-type{
+      margin-right: -1px;
+      padding: 16px 16px 16px 0px;
+    }
+  }
+
+}
+
+
+/* 새소식 - grid 레이아웃 */
 .news {
   display: grid;
   grid-template-columns: minmax(160px, 1fr) max-content;

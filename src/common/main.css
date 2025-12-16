@@ -2,3 +2,114 @@
 * {
   font-family: 'SUIT Variable';
 }
+
+body{
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: skyblue;
+  transition: all 1s;
+
+  @media (prefers-color-scheme: dark) {
+    background: #101010;
+  }
+}
+
+.wrapper {
+  position: relative;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 32px;
+  .item:first-of-type{
+    grid-column: 2/3;
+  }
+
+  .sun-and-moon{
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+
+  @media (max-width: 1160px){
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    padding: 240px 32px 32px 32px;
+
+    .sun-and-moon{
+      position: absolute;
+      top: -260px; left: 0px;
+      z-index: -1;
+      width: 100%;
+      max-width: 320px; aspect-ratio: 1/1;
+    }
+    .item:first-of-type{
+      grid-column: 1/2;
+    }
+  }
+}
+
+.item{
+  display: grid;
+  grid-template-rows: 100px 1fr;
+
+  h2, ul{
+    padding: 16px;
+    border: 1px solid rgba(22, 28, 190, 0.25);
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 0 16px rgba(2, 35, 100, 0.35);
+  }
+
+  h2{
+    margin-bottom: 16px;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    border: 1px solid rgba(22, 28, 15, 0.25);
+    background: #545454;
+    box-shadow: 0 0 16px rgba(2, 35, 35, 0.85);
+    color: #fff;
+  }
+}
+
+
+.item-list{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  line-height: 1.5;
+
+  li{
+    margin-block: 6px;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}
+
+
+  .sun-and-moon{
+    display: flex;
+    justify-content: center;
+    transition: all 1s;
+
+    img{
+      position: absolute;
+      max-width: 550px;
+      aspect-ratio: 1/1;
+      transform: translateY(10%);
+      transition: all 1s;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .sun{opacity: 0;}
+      .moon{opacity: 1;}
+    }
+    @media (prefers-color-scheme: light) {
+      .sun{opacity: 1;}
+      .moon{opacity: 0;}
+    }
+  }
