@@ -1,0 +1,87 @@
+.post {
+  container-type: inline-size;
+
+  .card {
+    padding: 10px;
+    background: #ffc;
+
+    h2 {
+      color: blue;
+    }
+
+    p {
+      margin-block: 1em;
+      color: red;
+      line-height: 1.5;
+    }
+
+    .link-wrapper {
+      display: flex;
+      flex-flow: nowrap column;
+      gap: 10px;
+    }
+
+    a {
+      padding: 0.5em 1em;
+      border-radius: 30px;
+
+      &.fill {
+        background: var(--dark-blue);
+        color: #fff;
+      }
+
+      &.outline {
+        border: 1px solid currentColor;
+        color: var(--dark-blue);
+      }
+    }
+  }
+
+  @container (width >= 600px) {
+    .card {
+      background: #fcf;
+
+      h2 {
+        color: red;
+      }
+
+      p {
+        color: green;
+      }
+
+      .link-wrapper {
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+  @container (width >= 600px) {
+    .card {
+      background: #fcf;
+
+      h2 {
+        color: red;
+      }
+
+      p {
+        color: green;
+      }
+
+      .link-wrapper {
+        flex-direction: row;
+      }
+    }
+  }
+
+.likelion{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 10px;
+  box-shadow: 0 0 0 5px green;
+
+  .double{
+    grid-column: span 2;
+  }
+}
